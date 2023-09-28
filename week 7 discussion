@@ -1,0 +1,11 @@
+import spacy
+
+# Load the language model
+nlp = spacy.load('en_core_web_sm')
+
+# Process a text using the loaded model
+doc = nlp("Do you be familiar with the knowledge of nlp?")
+
+# Access the POS tags for each token in the document
+for token in doc:
+    print(token.text, token.pos_)
